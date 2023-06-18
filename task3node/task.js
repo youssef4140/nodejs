@@ -58,7 +58,7 @@ fs.writeFile('./categories.json', categoriesJson, () => {
 //price
 const exchangeRates = async () => {
   var myHeaders = new Headers();
-  myHeaders.append("apikey", "UFazypZF07zsRZNiA04KHtw2Sa20yKLV");
+  myHeaders.append("apikey", "YfhJbQxcIjhAI3Lvv1yrCFeW0OiOIu6T");
 
   var requestOptions = {
     method: 'GET',
