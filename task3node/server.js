@@ -3,7 +3,7 @@ const fs = require('fs')
 const yup = require('yup')
 
 
-const categories = JSON.parse(fs.readFileSync('./categories.json', 'utf-8'));
+
 
 const fetchexchangeRates = async (currency_code) => {
     var myHeaders = new Headers();
@@ -25,7 +25,7 @@ const fetchexchangeRates = async (currency_code) => {
   };
 
   const changeprice = (exchange_rate, currency_code) => {
-    const pricechange = categories
+    const pricechange = JSON.parse(fs.readFileSync('./categories.json', 'utf-8'));
     pricechange.forEach(body => {
       body.products.forEach(product => {
         product.price = `${(parseFloat(product.price) * parseFloat(exchange_rate)).toFixed(2)} ${currency_code}`;
