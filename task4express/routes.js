@@ -1,6 +1,7 @@
 import express from 'express'
 import {get, products} from './model/products.js'
-import { options, sendProduct , updateProduct , addProduct, deleteProduct} from './controller/indexcontroller.js'
+import {sendProduct , updateProduct , addProduct, deleteProduct} from './controller/indexcontroller.js'
+import {options} from './services.js'
 
 const app = express()
 const root = (req,res)=> res.send(options)
